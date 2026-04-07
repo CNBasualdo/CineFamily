@@ -1,4 +1,37 @@
 .funciones{
     color: white;
+    padding: 20px;
     background-color: violet;
+}
+.salas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: red;
+}
+.sala-card{
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.horarios{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.horario-btn{
+    background-color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.horario-btn:hover{
+    background: green;
 }
