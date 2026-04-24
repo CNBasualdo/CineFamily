@@ -1,2 +1,14 @@
-.DS_Store
-Thumbs.db
+_pycache_
+*.pyc 
+*.pyo
+*.pyd
+
+.env
+.env*
+
+venv/
+db.sqlite3
+
+*.log
+media/
+staticfiles/

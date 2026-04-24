@@ -1,8 +1,9 @@
-FROM python:3.12.4
-ENV PYTHONUNBUFFERD=1
-WORKDIR /proyectocine1
-COPY requirements.txt /proyectocine1/
-RUN python -m pip install --ugrade pip
-RUN python -m pip install -r requirements.txt
+FROM python:3.12
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000" ]
 
-COPY . /proyectocine1/
+
+

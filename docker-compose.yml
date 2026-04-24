@@ -1,17 +1,26 @@
-version: '3.12.4'
+version: '3.9'
 
 services:
-    db:
-        image: postgres:18.0
-        restart: always
-        container_name: postgresql
-        volumes:
-            -./data/db/var/lib/postgresql/data
-        environment:
-            - DATABASE_HOST=127.0.0.1
-            - POSTGRES_DB=salasApi 
-            - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=admin
-        ports:
-        - "5432:5432"
-    
+  db:
+    image: postgres:15
+    container_name: postgresql
+    restart: always
+    volumes:   
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: salasApi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+
+  web:
+    build: .
+    container_name: django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

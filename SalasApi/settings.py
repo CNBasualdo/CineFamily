@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,13 +78,12 @@ WSGI_APPLICATION = 'SalasApi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST':'localhost',
-        'PORT':5432,
-        'NAME': 'cine_db',
-        'USER':'postgres',
+        'ENGINE' : 'django.db.backends.postgresql',
+        'NAME' : 'salasApi',
+        'USER' : 'postgres',
         'PASSWORD' : 'admin',
-        
+        'HOST' : 'db',
+        'PORT' : '5432',
         }
 }
 
