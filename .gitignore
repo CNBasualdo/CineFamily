@@ -1,14 +1,65 @@
-_pycache_
-*.pyc 
+#=================================
+# PYTHON
+#=================================
+_pycache__/
+*.py[cod]
 *.pyo
 *.pyd
 
-.env
-.env*
 
+#Virtual environments
 venv/
-db.sqlite3
+env/
 
-*.log
+#=================================
+# DJANGO
+#=================================
+db.sqlite3
 media/
 staticfiles/
+
+#Enviroment variables
+.env
+
+# logs
+*.log
+
+
+#=================================
+# POSTGRES/DOCKER
+#=================================
+
+data/
+docker/postgres/data/
+
+#=================================
+# REACT
+#=================================
+client/node_modules/
+client/build/
+
+#=================================
+# TEST
+#=================================
+.pytest_cache/
+.coverage
+htmlcov/
+
+#=================================
+# EDITORES
+#=================================
+.vscode/
+.idea/
+
+#=================================
+# SISTEMA
+#=================================
+.DS_Store
+Thumbs.db
+
+
+#=================================
+# CLIENT
+#=================================
+
+client/node_modules/

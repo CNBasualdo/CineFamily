@@ -1,9 +1,14 @@
 .navbar {
-    background-color: #1a1a22;
-    height: 64px;
-    padding: 0 16px;
-    overflow: hidden;
-
+    background: linear-gradient(
+    90deg,
+    #0f1f2a,
+    #111827,
+    #0f172a) !important;
+    padding: 10px 30px;
+    border-bottom: 2px solid #facc15;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .navbar-brand {
     padding: 0;
@@ -11,9 +16,256 @@
     align-items: center;
     
 }
-.logo {
-    height: 100px;
-    width: auto;
-    max-height: 100%;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    
+}
+.logo-cine {
+    color: white;
+    
+}
+.logo-family{
+    color: #e63946;
+}
+.links{
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+  
+}
+.nav-links{
+    color: white;
+    display: flex;
+    gap: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+.nav-links::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #d4af37;
+    transition: .3s;
+}
+.nav-links:hover::after{
+    width: 100%;
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
 
+
+.btn-carrito{
+    position: relative;
+    border: none;
+    background: #dc3545;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+}
+.btn-carrito:hover{
+    transform: scale(1.1);
+    background: #ff4757;
+}
+.badge-carrito{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+    background: #ffc107;
+    color: black;
+
+    min-width: 22px;
+    height: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 12px;
+    font-weight: bold;
+
+}
+.carrito-offcanvas{
+    background: #111827;
+    color: white;
+}
+.carrito-header{
+    border-bottom: 1px solid #374151;
+}
+.carrito-body{
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.pelicula-carrito{
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #374151;
+}
+.titulo-pelicula{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.cantidad-entradas{
+    color: #9ca3af;
+    font-size: .9rem;
+}
+.card-carrito{
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.datos-asiento{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+.btn-eliminar{
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 14px;
+    cursor: pointer;
+}
+.subtotal-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.total-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-carrito{
+    position: sticky;
+    bottom: 0;
+    background: #111827;
+    padding: 15px 0;
+}
+.total-carrito{
+    color: white;
+    font-weight: 700;
+}
+
+.btn-finalizar{
+    width: 100%;
+    background: #22c55e;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 700;
+}
+
+.offcanvas-body::-webkit-scrollbar{
+    width: 6px;
+}
+.offcanvas-body::-webkit-scrollbar-track{
+    background: transparent;
+}
+.offcanvas-body::-webkit-scrollbar-thumb{
+    background: #374151;
+    border-radius: 10px;
+}
+.products-carrito{
+    margin-top: 20px;
+}
+
+.product-carrito-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba( 255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+}
+
+.producto-nombre{
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.cantidad-controls{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-cantidad{
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-restar{
+    background: #dc3545;
+}
+.btn-sumar{
+    background: #28a745;
+}
+
+.cantidad-num{
+    min-width: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.subtotal-productos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
 }

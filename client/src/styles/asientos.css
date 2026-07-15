@@ -1,29 +1,201 @@
-.sala{
-    text-align: center;
-}
-.grid{
-    display: grid;
-    grid-template-columns: repeat(10,40px);
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
+.Sala {
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
 }
 
-.asiento{
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 10px;
+.header-funcion {
+    width: 85%;
     display: flex;
     align-items: center;
-    justify-self: center;
-    cursor: pointer;
+    justify-content: flex-start;
+    gap: 40px;
+    background: linear-gradient(90deg, #161616 0%, #1d1d1d 100%);
+    padding: 30px 40px;
+    border-radius: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
 }
-.libre{
-    background-color: green;
+.poster-pelicula {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-.ocupado{
-    background-color: red;
+.datos-funcion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.datos-funcion h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.badge-sala {
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.08);
+    color: #d1d1d1;
+    padding: 8p 18px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.info-extra {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.badge-horario,
+.badge-asientos {
+    background: #222;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pantalla {
+    width: 80%;
+    background: #b7d8d8;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #0d0d0d;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 8px;
+}
+
+.asiento {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.asiento:hover {
+    transform: scale(1.08);
+}
+
+.libre {
+    background-color: #16a34a;
+}
+.seleccionado{
+    background-color: linear-gradient(135deg, #f59e0b, #facc15);
+    transform: scale(1.08);
+    box-shadow: 0px 0px 15px rgba(250,204,21,0.6);
+}
+
+.ocupado {
+    background-color: #ef4444;
+}
+
+.icono-butaca {
+    font-size: 20px;
+    color: white;
+}
+
+.asiento-numero {
+    font-size: 9px;
+    color: white;
+    margin-top: 2px;
+}
+
+.carrito {
+    width: 420px;
+    margin-top: 30px;
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    padding: 24px;
+    border-radius: 18px;
+    color: white;
+}
+.carrito h3{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.lista-asientos{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+.item-asiento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b1b1b;
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+}
+.total{
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #2f2f2f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.btn-comprar{
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #dc2626;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-comprar:hover{
+    background: #ef4444;
+}
+.btn-comprar:disabled{
+    opacity: 0.5;
     cursor: not-allowed;
+}
+.vacio{
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
 }
